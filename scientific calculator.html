@@ -1,0 +1,123 @@
+<!DOCKTYPE html>
+<head>
+<title>Calculator</title>
+
+<style>
+input[type=button]
+{
+width:72;
+height:40;
+margin:0;
+padding:0;
+border-radius:10px;
+background-color:black;
+background-image:linear-gradient(lightgrey,black);
+font-size:19px;
+border:none;
+}
+.u{
+background-color:black;
+width : 28%;
+border:5px;
+border-color:white;
+border-radius:15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(e){
+
+  $(".num").click(function(){
+      var a =$(this).val();
+    $(".asd").val($(".asd").val() +a);
+  });
+
+$(".ac").click(function(){
+    $(".asd").val(null);
+  });
+
+$(".eq").click(function(){
+    $(".asd").val(eval($(".asd").val()));
+  });
+
+$(".sin").click(function(){
+    $(".asd").val(Math.sin($(".asd").val()));
+  });
+
+$(".tan").click(function(){
+    $(".asd").val(Math.tan($(".asd").val()));
+  });
+
+$(".cos").click(function(){
+    $(".asd").val(Math.cos($(".asd").val()));
+  });
+
+$(".log").click(function(){
+    $(".asd").val(Math.log($(".asd").val()));
+  });
+
+$(".sq").click(function(){
+    $(".asd").val(Math.pow($(".asd").val(),2));
+  });
+
+$(".pie").click(function(){
+var b=$(".asd").val();
+$(".asd").val(b*3.14);
+  });
+
+$("#back").click(function(){
+var num=$(".asd").val();
+   num=num.substring(0, num.length-1);
+$(".asd").val(num);
+  });
+});
+
+</script>
+</head>
+<body background=12.jpg>
+ <br>
+<center><h1 style=" font-size:50; color:black;"><u>CALCULATOR</u></h1></center><br>
+
+<center>
+<div class="u">
+<br><br>
+<table border=2px>
+<center>
+
+<input type="text" style="text-align:right; border-radius:10px; 
+background-image:linear-gradient(white); width:300; height:50; font-size:20;" class="asd" placeholder="0.0"><br>
+<br><br>
+
+
+<input type="button" class="ac" value="AC" style="background-image:linear-gradient(orange,orange);border-radius:25px">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" class="log" value="lg" style="background-image:linear-gradient(aqua,aqua);border-radius:25px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" class="pie" value="pi" style="background-image:linear-gradient(aqua,aqua);border-radius:25px">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" id="back" value="Back" style="background-image:linear-gradient(aqua,aqua);border-radius:25px" >&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+<input type="button" class="sin" value="sin" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="num" value="1" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="2" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="3" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="+" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px" ><br><br>
+<input type="button" class="cos" value="cos" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="num" value="4" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="5" style="background-image:linear-gradient(white,white);border-radius:30px" >
+<input type="button" class="num" value="6" style="background-image:linear-gradient(white,white);border-radius:30px" >
+<input type="button" class="num" value="-" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px"><br><br>
+<input type="button" class="tan" value="tan" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="num" value="7" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="8" style="background-image:linear-gradient(white,white);border-radius:30px" >
+<input type="button" class="num" value="9" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="num" value="*" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px"><br><br>
+<input type="button" class="num" value="." style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="eq" value="=" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="num" value="0" style="background-image:linear-gradient(white,white);border-radius:30px">
+<input type="button" class="sq" value="^" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px">
+<input type="button" class="num" value="/" style="background-image:linear-gradient(lightgreen,lightgreen);border-radius:30px"><br><br>
+
+
+</center><br>
+</table>
+</div>
+</center>
+</body>
+</html>
